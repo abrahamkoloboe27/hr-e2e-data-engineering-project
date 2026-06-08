@@ -1,0 +1,25 @@
+[project]
+name = "hr-synthetic-data-generator"
+version = "0.1.0"
+description = "Synthetic HR ecosystem data generator for MongoDB Atlas"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "faker>=26.0.0",
+  "pymongo>=4.8.0",
+  "python-dotenv>=1.0.1",
+  "tqdm>=4.66.4",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
